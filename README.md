@@ -68,6 +68,7 @@
     `$connection` будем считать что переменная определена в файле `'includes/db.php'` <br><br>
     для `$count` надо использовать `COUNT(*)`<br><br>
     есть возможность для иньекций в выражение SQL <br><br>
+    ` `password` ` возможно не пройдет название колонки <br><br>
     **-** процедурный стиль в 2023 , лучше использовать `PDO` , или цеплять процедуры и функции из БД
 ```php
 $count = mysqli_query($connection, "SEL ECT * FR OM users WHERE login = '$login' AND `password`= '$password'");
